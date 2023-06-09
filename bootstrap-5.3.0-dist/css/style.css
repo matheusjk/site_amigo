@@ -17,6 +17,7 @@
 
 .zoom {
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .zoom img {
@@ -27,6 +28,7 @@
 }
 
 .zoom:hover img {
+    opacity: 0.6;
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -49,37 +51,69 @@
     border: 4px solid #00837a;
 }
 
-.video-overlay {
+
+.caixa {
+    position: relative;
+    width: 50%;
+}
+
+.caixa img {
+    width: 100%;
+    height: auto;
+}
+
+.caixa svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10;
-}
-
-.video-background, .video-background, .img-fluid {
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-}
-
-.video-background {
-    position: relative;
-}
-
-/* .video a{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 75px;
-    left: 150px;
-    color: white;
-    background-size: 50px 50px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #00C6EE;
+    /* color: white; */
+    border: none;
+    /* border-radius: 5px; */
+    /* height: 50px; */
+    /* width: 100%; */
+    /* background-size: 50px 50 px;
     background-repeat: no-repeat;
-} */
+    background-position: center; */
+    /* left: 50%; */
+    /* transform: translateX(-50%) translateY(-50%); */
+    /* z-index: 10; */
+}
+
+.gg-play-button {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 122px;
+    height: 122px;
+    transition: 0.5s;
+    top: 30%;
+    left: 45%;
+    color:#056cff;
+}
+
+.gg-play-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 60px solid;
+    top: 6px;
+    left: 9px;
+}
+
+.video {
+    position: relative;
+    float: left;
+}
+
 
 .topo {
     /* background-color: #f0e2e22f; */
@@ -101,4 +135,11 @@ a.nav-link:hover{
     /* color: #d9a694; */
     color: #808080;
     transition: 0.6s;
+}
+
+
+.redes:hover {
+    /* background: green; */
+    transition: 0.6s;
+    transform: scale(1.3);
 }
