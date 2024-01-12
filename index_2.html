@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Filmes 2023</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+
+
+
+
+<div class="container">
+    <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <a type="button" class="btn-info btn-sm ml-3" href="<%= pag%>.jsp?funcao=novo">Novo Pacientes</a>
+                    <!-- <form class="form-inline my-2 my-lg-0 direita" method="get"> -->
+                        <input class="form-control form-control-sm mr-sm-2" type="search" id="txtbuscar" name="txtbuscar" placeholder="Buscar pelo Nome" aria-label="Search">
+                        <button class="btn btn-outline-info btn-sm my-2 my-sm-0 d-none d-md-block" type="submit" id="btn-buscar" name="btn-buscar">Buscar</button>
+
+                    <!-- </form> -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- <div class="mt-4 mb-4"> -->
+                        <a type="button" class="btn-info btn-sm ml-3" href="<%= pag%>.jsp?funcao=novo">Novo Pacientes</a>
+                        <!-- <form class="form-inline my-2 my-lg-0 direita" method="get"> -->
+                            <input class="form-control form-control-sm mr-sm-2" type="search" id="txtbuscar" name="txtbuscar" placeholder="Buscar pelo Nome" aria-label="Search">
+                            <button class="btn btn-outline-info btn-sm my-2 my-sm-0 d-none d-md-block" type="submit" id="btn-buscar" name="btn-buscar">Buscar</button>
+
+                        <!-- </form> -->
+                </div>
+            </div>
+    </div>
+
+    <div id ="lista" >
+
+    </div>
+
+    <div class="modal fade" id="modalDados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir Pacientes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form id="form" method="post" enctype="multipart/form-data">
+
+                    <div class="modal-body ">
+                        <div class="form-group ">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                            
+                        </div>
+
+                         <div class="form-group ">
+                            <label>Nome Social</label>
+                            <input type="text" class="form-control" id="nomesocial" name="nomesocial" placeholder="Nome Social" >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Imagem</label>
+                            <input type="file" class="form-control-file" id="imagem" name="imagem[]" onchange="carregarImg();">
+                        </div>
+                        <img src="" alt="Carregue a sua Imagem" id="target" width="150" height="150">
+
+                        <div align="center" id="mensagem">
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-fechar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" name="btn-salvar" id="btn-salvar" class="btn btn-primary">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+  </main>
+  </body>
+  </html>
